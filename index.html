@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Cricket 10</title>
+  <link rel="stylesheet" href="crick.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <style>
+    th {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    h5 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12" style="text-align:center;">
+        <h3>CRICKET 10</h3>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-lg-6" style="text-align:center;">
+        <h3>TEAM 1 SCORE</h3>
+        <h3 id="team1highscore" class="d-flex justify-content-center">0</h3>
+        <button id="bat1" class="btn btn-primary" onclick="batbyTeam1()">
+          HIT 1
+        </button>
+      </div>
+      <div class="col-lg-6" style="text-align:center;">
+        <h3>TEAM 2 SCORE</h3>
+        <h3 id="team2highscore">0</h3>
+        <button id="bat2" class="btn btn-primary" onclick="batbyTeam2()">
+          HIT 2
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-lg-12" style="text-align:center;">
+        <button id="generateresult" class="btn btn-primary" onclick="generateResult()">
+          GENERATE RESULT
+        </button>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-5">
+        <h5 style="text-align: center;">TEAM 1 SCORE BOARD</h5>
+        <table border="2px" style="padding: 5px;" id="team1scoreboard">
+
+        </table>
+      </div>
+      <div class="col-lg-2">
+
+        <br>
+        <br>
+        <h5>MATCH WON BY</h5>
+
+        <h5 id="matchown"></h5>
+        <hr>
+        <h5>MAN OF THE MATCH</h5>
+
+        <h5 id="playernum"></h5>
+        <h5 id="whichteam"></h5>
+        <h5 id="scoreid"></h5>
+
+
+      </div>
+      <div class="col-lg-5">
+        <h5 style="text-align: center;">TEAM 2 SCORE BOARD</h5>
+        <table border="2px" style="padding: 5px;" id="team2scoreboard">
+
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src=" index.js"></script>
+</body>
+
+</html>
