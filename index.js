@@ -93,6 +93,8 @@ function batbyTeam1() {
 
 function batbyTeam2() {
 
+    count++;
+
     if (current_player_team2 < 10) {
 
         document.getElementById("bat1").disabled = true;
@@ -270,3 +272,43 @@ function generateResult() {
 
 
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//timer///
+
+var count = 1;
+
+function timer(x) {
+    if (count == 1) {
+        count++;
+        var interval = setInterval(myfunction, 1000);
+    }
+    if (count == 3) {
+
+        count++;
+        var interval2 = setInterval(myfunction2, 1000);
+    }
+
+    function myfunction() {
+        document.getElementById("timer").innerHTML = x--;
+
+        if (x == 0 || ind_player_score_team1[9].includes(0) || ind_player_score_team1[9].length == 6) {
+            clearInterval(interval);
+            document.getElementById("bat1").disabled = true;
+            document.getElementById("bat2").disabled = false;
+        }
+
+
+    }
+
+    function myfunction2() {
+        document.getElementById("timer").innerHTML = x--;
+
+        if (x == 0 || ind_player_score_team2[9].includes(0) || ind_player_score_team2[9].length == 6 || (total_score_team1 < total_score_team2)) {
+            clearInterval(interval2);
+            document.getElementById("bat2").disabled = true;
+        }
+
+
+    }
+}
+//////////////////////////////////////////////////////////////////////////////
